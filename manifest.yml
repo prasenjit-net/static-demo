@@ -1,0 +1,4 @@
+---
+applications:
+- name: convergent-demo-dit
+  memory: 64M

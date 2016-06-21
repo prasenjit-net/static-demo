@@ -1,0 +1,96 @@
+#citi_layouts_pageWrapper {
+    -webkit-transition: opacity 500ms ease, -webkit-transform 500ms ease, background-color 500ms ease;
+    transition: opacity 500ms ease, transform 500ms ease, background-color 500ms ease
+}
+
+#citi_layouts_header {
+    background-color: #1eb4f1;
+    color: #FFF;
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#1EB4F1', endColorstr='#005287');
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#1eb4f1), to(#005287));
+    background-image: -webkit-linear-gradient(top, #1eb4f1, #005287 90%);
+    background-image: -moz-linear-gradient(top, #1eb4f1, #005287 90%);
+    background-image: -ms-linear-gradient(top, #1eb4f1, #005287 90%);
+    background-image: -o-linear-gradient(top, #1eb4f1, #005287 90%);
+    padding: 12px 0
+}
+
+#citi_layouts_header h1 {
+    margin: 0;
+    padding: 0
+}
+
+#citi_layouts_header p {
+    color: #FFF
+}
+
+#citi_layouts_header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+#citi_layouts_header a {
+    color: #FFF
+}
+
+#citi_layouts_header a:hover {
+    text-decoration: none
+}
+
+.citi-layouts-container {
+    padding: 0 22px
+}
+
+#citi_layouts_footer {
+    background-color: #444;
+    color: #FFF;
+    padding: 46px 4% 46px;
+   
+}
+
+.addRedStyle {
+    border: 2px solid red;
+}
+
+.container {
+    margin-left: 0;
+}
+
+.container-fluid {
+    min-height: 350px;
+    padding:40px 0;
+}
+
+.citi-layouts-container p {
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.cbolui-hidden {
+    display: none !important
+}
+
+@media (min-width: 768px) {
+    .modal-sm {
+        width: 300px;
+    }
+}
+
+#c3_cbolui_header {
+    min-height: 100px;
+}
+
+#c3_cbolui_body {
+    min-height: 500px;
+}
+
+#c3_cbolui_footer {
+    min-height: 25px;
+    text-align: center;
+}
+
+.alert {
+    color: #ff0000;
+}

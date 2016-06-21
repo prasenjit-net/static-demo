@@ -1,0 +1,238 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Citibank&reg; online</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://code.jquery.com/jquery-1.12.3.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/landing-olymbus.css" />
+</head>
+
+<body>
+    <div id="C3Container">
+        <header id="citi_layouts_header" class="cbolui-grid-row citi_layouts_container" role="header">
+            <div class="citi-layouts-container cbolui-clearfix">
+                <h1 class="cbolui-pull-left"><a href="/" class="cbolui-pull-left"><img src="images/citiLogo.png" alt="Welcome to Citibank"></a></h1>
+            </div>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div id="citi_branding_signonForm_errorContainer" class="cbolui-grid-row cbolui-hidden">
+                    <div class="cbolui-form-group">
+                        <div class="cbolui-icon-wrapper">
+                            <span class="cbolui-icon-globalSpriteBase cbolui-icon-redError"></span>
+                            <span tabindex="-1" class="cbolui-icon_text alert" role="alert" aria-hidden="true">Please enter a User ID and Password.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="login_form">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="panel panel-default panel-login">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-6 col-xs-offset-5">
+                                    <h4>Login</h4></div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div id="errorMsg" class="col-xs-6 col-xs-offset-3" style="display:none;">
+                                    <div class="cbolui-form-group">
+                                        <div class="cbolui-icon-wrapper">
+                                            <span class="cbolui-icon-globalSpriteBase cbolui-icon-redError"></span>
+                                            <span tabindex="-1" class="cbolui-icon_text alert" role="alert"><strong>Invalid login details!!!...</strong></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="row">
+                                <div class="col-xs-6 col-xs-offset-3">
+                                    <form action="" id="login-form">
+                                        <div class="form-group">
+                                            <input type="text" name="txt_username" id="txt_username" class="form-control" placeholder="Username" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" name="txt_passwd" id="txt_passwd" class="form-control" placeholder="Password" />
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="button" name="btn_login" id="btn_login" class="form-control btn btn-primary">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="dashboard" style="display:none;">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="panel panel-default panel-login">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-6 col-xs-offset-5"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <div class="col-xs-offset-1" id="sid_data">
+                                    <strong>Welcome User, you have been successfully authenticated!</strong>
+                                </div>
+                            </div>
+                            <br><br>
+                            <div class="row" id="passwd_btnContainer">
+                                <div class="col-xs-6 col-xs-offset-1">
+                                    <form action="">                                        
+                                        <div class="form-group">
+                                            <button type="button" nmae="btn_data" id="btn_data" class="btn btn-primary">Change Password</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+							<div class="row" id="passwd_container" style="display:none;">
+                                <div class="col-xs-6 col-xs-offset-3">
+                                    <form action="" id="changePassword-form">
+                                        <div class="form-group">
+                                            <input type="password" name="txt_oldPassword" id="txt_oldPassword" class="form-control" placeholder="oldPassword" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" name="txt_newPassword" id="txt_newPassword" class="form-control" placeholder="newPassword" />
+                                        </div>
+										<div class="form-group">
+                                            <input type="password" name="txt_confirmPassword" id="txt_confirmPassword" class="form-control" placeholder="confirmPassword" />
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="button" name="btn_changepassword" id="btn_changepassword" class="form-control btn btn-primary">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="citi_layouts_footer">
+	
+            <div class="citi-layouts-container">
+                <p>Citi.com is the global source of information about and access to financial services provided by the Citigroup family of companies. </p>
+                <p>Citibank Berhad
+                    <br> Co.Reg. No. 297089-M
+                    <br> GST Registration No. 000 958 922 752
+                    <br> Copyright © 2016 Citigroup Inc.</p>
+            </div>
+        </div>
+	</div>
+</body>
+
+</html>
+<script>
+$("#btn_login").on('click', function() {    
+
+    //$("#login_form").hide();
+            //$("#dashboard").show();
+            //$("#errorMsg").hide();
+
+    $.ajax({
+        url: '/psg/user/login/sso',
+        type: 'POST',
+        async: true,
+        crossDomain: true,
+        data: JSON.stringify({
+            'userId': $("#txt_username").val(),
+            'password': $("#txt_passwd").val()
+        }),
+        dataType: 'json',
+        contentType: "application/json",
+        beforeSend: function(xhr, options) {
+            if (window.sessionStorage.getItem('sid')) {
+                xhr.setRequestHeader("sid", window.sessionStorage.getItem('sid'));
+            }
+            if (window.sessionStorage.getItem('CCPToken')) {
+                xhr.setRequestHeader("CCPToken", window.sessionStorage.getItem('CCPToken'));
+            }
+
+            xhr.setRequestHeader("countryCode", "US");
+        },
+        complete: function(xhr, status) {
+            if (xhr.getResponseHeader('sid')) {
+                window.sessionStorage.setItem('sid', xhr.getResponseHeader('sid'));
+            }
+            if (xhr.getResponseHeader('CCPToken')) {
+                window.sessionStorage.setItem('CCPToken', xhr.getResponseHeader('CCPToken'));
+            }
+        },
+        success: function(model, data, options) {
+
+            console.log(arguments);
+            $("#login_form").hide();
+            $("#dashboard").show();
+            $("#errorMsg").hide();
+
+        },
+        error: function(xhr) {
+            $("#errorMsg").show();
+            console.log(xhr);
+        }
+    });
+});
+
+$("#btn_data").on('click', function() {
+	$("#passwd_container").show();
+	$("#passwd_btnContainer").hide();
+});
+
+$("#btn_changepassword").on('click', function() {
+
+    $.ajax({
+        url: '/psg/user/changepassword/sso',
+        type: 'POST',
+        async: true,
+        crossDomain: true,
+        data: JSON.stringify({
+            'oldPassword': $("#txt_oldPassword").val(),
+            'newPassword': $("#txt_newPassword").val(),
+			'confirmPassword': $("#txt_confirmPassword").val()
+        }),
+        dataType: 'json',
+        contentType: "application/json",
+        beforeSend: function(xhr, options) {
+            if (window.sessionStorage.getItem('sid')) {
+                xhr.setRequestHeader("sid", window.sessionStorage.getItem('sid'));
+            }
+            if (window.sessionStorage.getItem('CCPToken')) {
+                xhr.setRequestHeader("CCPToken", window.sessionStorage.getItem('CCPToken'));
+            }
+            xhr.setRequestHeader("countryCode", "US");
+            xhr.setRequestHeader("Function", "system#function#action");
+        },
+        complete: function(xhr, status) {
+            if (xhr.getResponseHeader('sid')) {
+                window.sessionStorage.setItem('sid', xhr.getResponseHeader('sid'));
+            }
+            if (xhr.getResponseHeader('CCPToken')) {
+                window.sessionStorage.setItem('CCPToken', xhr.getResponseHeader('CCPToken'));
+            }
+        },
+        success: function(model, data, options) {
+
+            console.log(arguments);
+
+            $("#sid_data").html("<strong>Change password success!!!</strong>");
+
+        },
+        error: function(xhr) {
+            $("#sid_data").html("<strong>Change password failed!!!</strong>");
+        }
+    });
+});
+</script>
